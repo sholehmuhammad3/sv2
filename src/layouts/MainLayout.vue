@@ -19,13 +19,13 @@ const currentItem = ref('tab-Web')
 const items = ref([
   'Web', 'Shopping', 'Videos', 'Images',
 ])
-const more = [
+const more = ref([
   'News', 'Maps', 'Books', 'Flights', 'Apps',
-]
+])
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
 
 function addItem () {
-  const removed = items.splice(0, 1)
+  const removed = items.value.splice(0, 1)
 }
 const showDrawer = (type: string) => {
   switch (type) {
